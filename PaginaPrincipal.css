@@ -1,0 +1,185 @@
+
+html, body {
+  height: 100%;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
+body {
+  background-color: #234567;
+  color: white;
+  flex: 1;
+}
+
+.navegador {
+  font-family: 'UnifrakturCook', cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: darkblue;
+  border: solid 2px black;
+  padding: 30px;
+}
+
+.navegador ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navegador li {
+  margin: 0;
+  padding: 0;
+}
+
+.navegador a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+.navegador a:hover {
+  color: #ffcc00;
+}
+
+main {
+  font-family: 'UnifrakturCook', cursive;
+  display: grid;
+  grid-template-columns: 250px 2fr; /* novedades a la izquierda, productos al centro */
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+.novedades {
+  background-color: #123456;
+  color: white;
+  padding: 20px;
+}
+
+.productos {
+  background-color: #234567;
+  color: white;
+  padding: 20px;
+}
+
+/* Corrección del typo en clase imágenes novedades */
+.imagenes-novedades {
+   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center; /* opcional: centra las imágenes horizontalmente */
+}
+
+.novedades img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.novedades {
+  overflow: hidden;
+}
+
+.imagen img,
+.imagen-galeria img,
+.galeria-juegos img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.galeria-peliculas,
+.galeria-series,
+.galeria-juegos {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.imagen-galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.imagen-galeria figcaption {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño un 20% */
+}
+
+footer {
+  font-family: 'UnifrakturCook', cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: darkblue;
+  border: solid 2px black;
+  padding: 30px;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: -100px;
+  left: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.cookie-banner.show {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1;
+}
+
+.cookie-banner button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-banner button:first-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cookie-banner button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
