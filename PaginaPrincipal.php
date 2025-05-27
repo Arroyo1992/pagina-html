@@ -7,59 +7,155 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     <head>
         <meta charset="UTF-8">
         <title>Middle Earth Fans</title>
-        <style>
-            html,body{
-                height: 100%;
-                display: flex;
-                margin: 0;
-                flex-direction: column;
-            }
-            body{
-                background-color: blue;
-                color: white;
-            }
-            .navegador{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                background-color: darkblue;
-                border: solid 2px black;
-                padding: 30px;
-                
-            }
-            main{
-                flex: 1;
-                
-            }
-            footer{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                background-color: darkblue;
-                border: solid 2px black;
-                padding: 30px;   
-            }
-        </style>
+        <link rel="stylesheet" href="PaginaPrincipal.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+        
     </head>
     <body>
         <nav class="navegador">
-            <div class="logo">Middle Earth Fans</div>
-            <div class="inicio">Inicio</div>
-            <div class="peliculas">Peliculas</div>
-            <div class="juegos">Juegos</div>
-            <div class="libros">Libros</div>
-            <div class="registro">Registro</div>
+            <div class="logo">MIDDLE EARTH FANS</div> 
+            <!-- comment <div class="inicio">Inicio</div>-->
+            <ul>
+                <li><a href="inicio">Inicio</a></li>
             
+                <li><a href="peliculas">Peliculas</a></li>
+            
+                <li><a href="peliculas">Juegos</a></li>
+            
+                <li><a href="peliculas">Libros</a></li>
+            
+                <li><a href="peliculas">Registro</a></li>
+            </ul>
         </nav>
-        <main>
-            <div class="novedades">Últimas novedades</div>
+    <main>
+    <div class="novedades">
+      
+        <h2>Últimas novedades</h2>
+    
+        <div class="imagenes-novedades">
+        <figure class="imagen">
+            <img src="JuegoMoria.jpg" alt="Juego de Moria" />
+        
+            <figcaption>Juego de Moria</figcaption>
+        
+            </figure>
+        <figure class="imagen">
+          
+        <img src="JuegoGollum.jpg" alt="Juego de Gollum" />
+        
+        <figcaption>Juego de Gollum</figcaption>
+      </figure>
             
-        </main>
+        <figure class="imagen">
+            
+         <img src="JuegoTercera.jpg" alt="Juego de la Tercera" />
+         
+         <figcaption>Juego de la Tercera</figcaption>
+         
+      </figure>
+        </div>
+    </div>
+
+    <div class="productos">
+    <h2>Productos</h2>
+
+    <div class="peliculas">Películas</div>
+        <div class="galeria-peliculas">
+            
+        <figure class="imagen-galeria">
+            
+        <img src="HobbitPelicula.jpg" alt="El Hobbit" />
+        <figcaption>El Hobbit</figcaption>
+        
+      </figure>
+            
+      <figure class="imagen-galeria">
+          
+        <img src="SmaugPelicula.jpg" alt="La Desolación de Smaug" />
+        <figcaption>Smaug</figcaption>
+        
+      </figure>
+      <figure class="imagen-galeria">
+          
+        <img src="EjercitoPelicula.jpg" alt="La Batalla de los Cinco Ejércitos" />
+        <figcaption>Batalla de los Cinco Ejércitos</figcaption>
+        
+      </figure>
+    </div>
+
+    <div class="series">Series</div>
+    <div class="galeria-series">
+        
+      <figure class="imagen-galeria">
+          
+        <img src="AnilloSeriePrimera.jpg" alt="Anillos de Poder - Temporada 1" />
+        <figcaption>Temporada 1</figcaption>
+        
+      </figure>
+        
+      <figure class="imagen-galeria">
+        <img src="AnilloSerieSegunda.jpg" alt="Anillos de Poder - Temporada 2" />
+        <figcaption>Temporada 2</figcaption>
+        
+      </figure>
+    </div>
+
+     <div class="juegos">Juegos</div>
+     <div class="galeria-juegos">
+        
+      <figure class="imagen-galeria">
+        <img src="ComunidadJuego.jpg" alt="La Comunidad del Anillo - Juego" />
+        <figcaption>La Comunidad</figcaption>
+        
+      </figure>
+      <figure class="imagen-galeria">
+        <img src="TorresJuegos.jpg" alt="Las Dos Torres - Juego" />
+        <figcaption>Las Dos Torres</figcaption>
+      </figure>
+      <figure class="imagen-galeria">
+        <img src="RetornoJUego.jpg" alt="El Retorno del Rey - Juego" />
+        <figcaption>Retorno del Rey</figcaption>
+      </figure>
+     </div>
+    </div>
+    </main>
         <footer>
             <div class="cookies">Cookies</div>
             <div class="normativa">Normativa</div>
             <div class="terminos">Terminos de uso</div>
             <div class="redes">Nuestras redes</div>
         </footer>
+        
+        <div id="cookie-banner" class="cookie-banner">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. ¿Aceptas su uso?</p>
+        <button onclick="acceptCookies()">Aceptar</button>
+        <button onclick="rejectCookies()">Rechazar</button>
+        </div>
+        <script>
+        window.onload = function () {
+        const banner = document.getElementById('cookie-banner');
+        if (!localStorage.getItem('cookiesChoice')) {
+        banner.classList.add('show');
+        }   
+        };
+
+        function acceptCookies() {
+        localStorage.setItem('cookiesChoice', 'accepted');
+        closeBanner();
+        }
+
+        function rejectCookies() {
+        localStorage.setItem('cookiesChoice', 'rejected');
+        closeBanner();
+        }
+
+        function closeBanner() {
+        const banner = document.getElementById('cookie-banner');
+        banner.classList.remove('show');
+        setTimeout(() => {
+         banner.style.display = 'none';
+        },  500);
+        }
+    </script>
     </body>
 </html>
