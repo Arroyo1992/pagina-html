@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Middle Earth Fans</title>
+        <link rel="stylesheet" href="PaginaPrincipal.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navegador">
+            <div class="logo">MIDDLE EARTH FANS</div> 
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="peliculas.html">Peliculas</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="login.html">Registro</a></li>
+            </ul>
+        </nav>
+    <main>
+    <div class="novedades">
+      
+        <h2>Últimas novedades</h2>
+    
+        <div class="imagenes-novedades">
+        <figure class="imagen">
+            <img src="../imagenes/JuegoMoria.jpg" alt="Juego de Moria" />
+            <figcaption>Juego de Moria</figcaption>
+        </figure>
+
+        <figure class="imagen">
+            <img src="../imagenes/JuegoGollum.jpg" alt="Juego de Gollum" />
+            <figcaption>Juego de Gollum</figcaption>
+        </figure>
+            
+        <figure class="imagen">
+            <img src="../imagenes/JuegoTercera.jpg" alt="Juego de la Tercera" />
+            <figcaption>Juego de la Tercera</figcaption>
+        </figure>
+        </div>
+    </div>
+
+    <div class="productos">
+    <h2>Productos</h2>
+
+    <div class="peliculas">Películas</div>
+        <div class="galeria-peliculas">
+            
+        <figure class="imagen-galeria">
+            <img src="../imagenes/HobbitPelicula.jpg" alt="El Hobbit" />
+            <figcaption>El Hobbit</figcaption>
+        </figure>
+            
+        <figure class="imagen-galeria">
+            <img src="../imagenes/SmaugPelicula.jpg" alt="La Desolación de Smaug" />
+            <figcaption>Smaug</figcaption>
+        </figure>
+
+        <figure class="imagen-galeria">
+            <img src="../imagenes/EjercitoPelicula.jpg" alt="La Batalla de los Cinco Ejércitos" />
+            <figcaption>Batalla de los Cinco Ejércitos</figcaption>
+        </figure>
+    </div>
+
+    <div class="series">Series</div>
+    <div class="galeria-series">
+        
+        <figure class="imagen-galeria">
+            <img src="../imagenes/AnilloSeriePrimera.jpg" alt="Anillos de Poder - Temporada 1" />
+            <figcaption>Temporada 1</figcaption>
+        </figure>
+        
+        <figure class="imagen-galeria">
+            <img src="../imagenes/AnilloSerieSegunda.jpg" alt="Anillos de Poder - Temporada 2" />
+            <figcaption>Temporada 2</figcaption>
+        </figure>
+    </div>
+
+     <div class="juegos">Juegos</div>
+     <div class="galeria-juegos">
+        
+        <figure class="imagen-galeria">
+            <img src="../imagenes/ComunidadJuego.jpg" alt="La Comunidad del Anillo - Juego" />
+            <figcaption>La Comunidad</figcaption>
+        </figure>
+
+        <figure class="imagen-galeria">
+            <img src="../imagenes/TorresJuegos.jpg" alt="Las Dos Torres - Juego" />
+            <figcaption>Las Dos Torres</figcaption>
+        </figure>
+
+        <figure class="imagen-galeria">
+            <img src="../imagenes/RetornoJUego.jpg" alt="El Retorno del Rey - Juego" />
+            <figcaption>Retorno del Rey</figcaption>
+        </figure>
+     </div>
+    </div>
+    </main>
+
+        <footer>
+            <a class="cookies" href="#">Cookies</a>
+            <a class="normativa" href="#">Normativa</a>
+            <a class="terminos" href="#">Términos de uso</a>
+            <a class="redes" href="#">Nuestras redes</a>
+        </footer>
+        
+        <div id="cookie-banner" class="cookie-banner">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. ¿Aceptas su uso?</p>
+        <button onclick="acceptCookies()">Aceptar</button>
+        <button onclick="rejectCookies()">Rechazar</button>
+        </div>
+
+        <script>
+        window.onload = function () {
+            const banner = document.getElementById('cookie-banner');
+            if (!localStorage.getItem('cookiesChoice')) {
+                banner.classList.add('show');
+            }   
+        };
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesChoice', 'accepted');
+            closeBanner();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookiesChoice', 'rejected');
+            closeBanner();
+        }
+
+        function closeBanner() {
+            const banner = document.getElementById('cookie-banner');
+            banner.classList.remove('show');
+            setTimeout(() => {
+                banner.style.display = 'none';
+            },  500);
+        }
+    </script>
+    </body>
+</html>

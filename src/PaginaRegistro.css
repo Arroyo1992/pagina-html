@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a; /* bg-color */
+  color: #f8fafc; /* text-color */
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #111827; /* nav-footer-color */
+  padding: 30px;
+  border-bottom: 2px solid black;
+}
+
+.navegador ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav li a:hover {
+  color: #facc15; /* hover-color */
+  text-shadow: 0 0 8px #facc15;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #0f172a; /* bg-color */
+}
+
+/* FORMULARIO */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1e293b; /* section-color */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 420px;
+}
+
+.formulario label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #f2f2f2;
+  color: #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.formulario input:focus {
+  box-shadow: 0 0 5px #22c55e; /* cookie-accept */
+  outline: none;
+}
+
+.formulario .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.formulario button {
+  padding: 12px;
+  background-color: #22c55e; /* cookie-accept */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario button:hover {
+  background-color: #16a34a; /* darker green */
+  transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #111827; /* nav-footer-color */
+  padding: 30px;
+  border-top: 2px solid black;
+  font-size: 15px;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer li a:hover {
+  color: #facc15; /* hover-color */
+}

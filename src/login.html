@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="PaginaRegistro.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <nav class="navegador">
+            <div class="logo">MIDDLE EARTH FANS</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="peliculas.html">Peliculas</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="login.html">Registro</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form class="formulario" id="formulario">
+                <label for="name">Usuario</label>
+                <input type="text" id="usuario" name="name" required="">
+                
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required="">
+                
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required="">
+                <div>
+                    
+                <input type="checkbox" id="recordar" name="recordar">   
+                <label for="recordar">¿Recordar mi usuario?</label>
+                
+                </div>
+                <div id="error-msg" class="error-msg" >
+                    
+                </div>
+                
+                <button type="submit" class="submit" id="submit">Iniciar sesión</button>
+            </form>
+        </main>
+        <footer>
+            <ul>
+            <li><a href="#"></a>Cookies</li>
+            <li><a href="#"></a>Normativa</li>   
+            <li><a href="#"></a>Terminos de uso</li>   
+            <li><a href="#"></a>Nuestras redes</li>   
+            </ul>  
+        </footer>
+        <script src="PaginaRegistro.js"></script>
+    </body>
+    
+</html>
